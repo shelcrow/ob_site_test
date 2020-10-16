@@ -7,17 +7,24 @@ servers:
 - url: "https://virtserver.swaggerhub.com/sheldon_sunspec/Site_OB/1.0.0"
   description: "SwaggerHub API Auto Mocking"
 tags:
+  - name: site
+    description: API calls for the Site object
   - name: site_model
     x-displayName: The Site Model
     description: |
       <SchemaDefinition schemaRef="#/components/schemas/Site" />
 x-tagGroups:
-  - name: ModelWeatherSource
+  - name: API Calls
+    tags:
+      - site
+  - name: Models
     tags:
       - site_model
 paths:
   /site:
     get:
+      tags:
+        - site
       summary: "Returns all sites."
       responses:
         "200":
